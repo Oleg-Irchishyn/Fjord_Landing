@@ -148,8 +148,6 @@ carousel.each(function (index) {
     dots: false,
     arrows: false,
     centerMode: true,
-    autoplay: true,
-    autoplaySpeed: 10000,
     responsive: [
       {
         breakpoint: 769,
@@ -157,6 +155,8 @@ carousel.each(function (index) {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
           vertical: true,
         }
       },
@@ -166,6 +166,8 @@ carousel.each(function (index) {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
           dots: false,
           arrows: false,
         }
@@ -176,6 +178,8 @@ carousel.each(function (index) {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
           infinite: true,
           dots: false,
           arrows: false
@@ -187,6 +191,8 @@ carousel.each(function (index) {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 10000,
           infinite: true,
           dots: false,
           arrows: false
