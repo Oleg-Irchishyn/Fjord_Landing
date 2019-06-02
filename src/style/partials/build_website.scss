@@ -1,0 +1,57 @@
+﻿.build_website {
+	min-height: 415px;
+	display: inline-block;
+	width: 100%;
+	background: $bgSecond;
+
+	.build_website__inner {
+		position: relative;
+		text-align: center;
+
+		.entry_title {
+			margin-top: 120px;
+			font-family: $fontMainHairline;
+			font-size: 72px;
+			line-height: normal;
+			font-weight: normal;
+			color: $textColor;
+		}
+
+		.entry_message {
+			white-space: pre-line;
+			font-family: $fontMainLight;
+			font-size: 18px;
+			line-height: 26px;
+			color: $textColor;
+			font-weight: bold;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.build_website {
+		min-height: initial;
+
+		.build_website__inner {
+			.entry_title {
+				margin-top: 70px;
+				font-size: 50px;
+			}
+
+			.entry_message {
+				white-space: normal;
+				margin-top: 20px;
+				margin-bottom: 70px;
+			}
+		}
+	}
+}
+
+/*EXCEPTIONS IN STYLES FOR IE*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.build_website {
+		float: left;
+		margin-top: -20px;
+	}
+}

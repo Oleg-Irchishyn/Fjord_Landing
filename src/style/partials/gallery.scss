@@ -1,0 +1,437 @@
+﻿.gallery {
+	display: inline-block;
+	width: 100%;
+	min-height: 1200px;
+	margin-top: 100px;
+
+	.gallery__inner {
+		max-width: 1600px;
+		margin: 0 auto;
+
+		.gallery_title {
+			font-family: $fontMainBlack;
+			font-size: 26px;
+			line-height: normal;
+			color: $textColor;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.gallery_carousel {
+	min-height: 1200px;
+
+	.carousel_item {
+		display: flex !important;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		position: relative;
+
+		.item_image {
+			position: absolute;
+			cursor: pointer;
+			border: 2px;
+
+			.overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				background: #000;
+				opacity: 0;
+			}
+
+			.btn.btn_fourth {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.gallery_carousel .carousel_item .item_image:hover,
+.gallery_carousel .carousel_item .item_image:focus {
+	.overlay {
+		opacity: 0.7;
+		transition: .4s;
+	}
+
+	.btn.btn_fourth {
+		opacity: 1;
+		transition: .4s;
+	}
+}
+
+.gallery_carousel .carousel_item .first_image {
+	left: -50px;
+	top: 610px;
+}
+
+.gallery_carousel .carousel_item .second_image {
+	left: 195px;
+	top: 0px;
+}
+
+.gallery_carousel .carousel_item .third_image {
+	top: 30px;
+	left: 615px;
+}
+
+.gallery_carousel .carousel_item .fourth_image {
+	top: 500px;
+	left: 320px;
+}
+
+.gallery_carousel .carousel_item .fifth_image {
+	right: -50px;
+	top: 280px;
+}
+
+.gallery_carousel .carousel_item .sixth_image {
+	top: 750px;
+	left: 290px;
+}
+
+.gallery_carousel .carousel_item .last_image {
+	top: 770px;
+	right: 150px;
+}
+
+/*SLICK SLIDER CONTAINER EXTRA STYLES*/
+
+.gallery .slick-list {
+	min-height: 1200px;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 992px) {
+	.gallery {
+		display: inline-block;
+		width: 100%;
+		min-height: 385px;
+		margin-top: 40px;
+
+		.gallery__inner {
+			max-width: 100%;
+			margin: 0 auto;
+
+			.gallery_title {
+				font-family: $fontMainBlack;
+				font-size: 22px;
+				line-height: normal;
+				color: $textColor;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.gallery_carousel {
+		min-height: 1200px;
+
+		.carousel_item {
+			display: flex !important;
+			flex-wrap: wrap;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			position: relative;
+
+			.item_image {
+				position: relative;
+				cursor: pointer;
+				border: 2px;
+				margin-bottom: 80px;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.item_image:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.gallery_carousel .carousel_item .first_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .second_image {
+		left: 0px;
+		top: 0px;
+	}
+
+	.gallery_carousel .carousel_item .third_image {
+		top: 0px;
+		left: 0px;
+	}
+
+	.gallery_carousel .carousel_item .fourth_image {
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .fifth_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .sixth_image {
+		top: 0px;
+		left: 0px;
+	}
+
+	.gallery_carousel .carousel_item .last_image {
+		top: 0px;
+		right: 0px;
+	}
+
+	/*SLICK SLIDER CONTAINER EXTRA STYLES*/
+
+	.gallery .slick-list {
+		min-height: initial;
+	}
+
+	.gallery_carousel .slick-slide {
+		margin: 50px 0px 50px 0px;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.gallery {
+		display: inline-block;
+		width: 100%;
+		min-height: 385px;
+		margin-top: 40px;
+
+		.gallery__inner {
+			max-width: 100%;
+			margin: 0 auto;
+
+			.gallery_title {
+				font-family: $fontMainBlack;
+				font-size: 26px;
+				line-height: normal;
+				color: $textColor;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.gallery_carousel {
+		min-height: 1200px;
+
+		.carousel_item {
+			display: flex !important;
+			flex-wrap: wrap;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			position: relative;
+
+			.item_image {
+				position: relative;
+				cursor: pointer;
+				border: 2px;
+				margin-bottom: 80px;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.item_image:last-of-type {
+				margin-bottom: 80px;
+			}
+		}
+	}
+
+	.gallery_carousel .carousel_item .first_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .second_image {
+		left: 0px;
+		top: 0px;
+		order: 3;
+	}
+
+	.gallery_carousel .carousel_item .third_image {
+		top: 0px;
+		left: 0px;
+		order: 2;
+	}
+
+	.gallery_carousel .carousel_item .fourth_image {
+		top: 0px;
+		left: 0px;
+		width: 80%;
+		order: 1;
+	}
+
+	.gallery_carousel .carousel_item .fifth_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .sixth_image {
+		top: 0px;
+		left: 0px;
+		margin-top: 80px;
+	}
+
+	.gallery_carousel .carousel_item .last_image {
+		top: 0px;
+		right: 0px;
+	}
+
+	/*SLICK SLIDER CONTAINER EXTRA STYLES*/
+
+	.gallery .slick-list {
+		min-height: initial;
+	}
+
+	.gallery_carousel .slick-slide {
+		margin: 0px 0px 0px 0px;
+	}
+
+	/*SLICK SLIDER CONTAINER EXTRA STYLES*/
+
+	.gallery .slick-list {
+		min-height: initial;
+	}
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1599px) {
+	.gallery {
+		display: inline-block;
+		width: 100%;
+		min-height: 1200px;
+		margin-top: 100px;
+
+		.gallery__inner {
+			max-width: 100%;
+			margin: 0 auto;
+
+			.gallery_title {
+				font-family: $fontMainBlack;
+				font-size: 26px;
+				line-height: normal;
+				color: $textColor;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.gallery_carousel {
+		min-height: 1200px;
+
+		.carousel_item {
+			display: flex !important;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			position: relative;
+			max-width: 960px;
+			margin: auto;
+
+			.item_image {
+				position: absolute;
+				cursor: pointer;
+				border: 2px;
+
+				.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					background: #000;
+					opacity: 0;
+				}
+
+				.btn.btn_fourth {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.gallery_carousel .carousel_item .item_image:hover,
+	.gallery_carousel .carousel_item .item_image:focus {
+		.overlay {
+			opacity: 0.7;
+			transition: .4s;
+		}
+
+		.btn.btn_fourth {
+			opacity: 1;
+			transition: .4s;
+		}
+	}
+
+	.gallery_carousel .carousel_item .first_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .second_image {
+		left: 50px;
+		top: 80px;
+	}
+
+	.gallery_carousel .carousel_item .third_image {
+		top: 100px;
+		left: 415px;
+	}
+
+	.gallery_carousel .carousel_item .fourth_image {
+		top: 560px;
+		left: 70px;
+	}
+
+	.gallery_carousel .carousel_item .fifth_image {
+		display: none;
+	}
+
+	.gallery_carousel .carousel_item .sixth_image {
+		top: 800px;
+		left: 50px;
+	}
+
+	.gallery_carousel .carousel_item .last_image {
+		top: 830px;
+		right: 0px;
+		left: 580px;
+	}
+
+	/*SLICK SLIDER CONTAINER EXTRA STYLES*/
+
+	.gallery .slick-list {
+		min-height: 1200px;
+	}
+
+	.gallery_carousel .slick-slide {
+		margin: 0px 70px 0px 0px;
+	}
+}
+
+/*EXCEPTIONS IN STYLES FOR IE*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.gallery {
+		float: left;
+		width: 100%;
+	}
+}

@@ -1,0 +1,89 @@
+// fonts
+
+@font-face {
+	font-family: "Montserrat-Black";
+	src: url("../fonts/montserrat/Montserrat-Black.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Montserrat-Light";
+	src: url("../fonts/montserrat/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Montserrat-Hairline";
+	src: url("../fonts/montserrat/montserrat-Hairline.otf") format("opentype");
+}
+
+$fontMainBlack: "Montserrat-Black", sans-serif;
+$fontMainLight: "Montserrat-Light", sans-serif;
+$fontMainHairline: "Montserrat-Hairline", sans-serif;
+
+// colors
+
+$bgMain: #f5f6f8;
+$bgSecond: #fff;
+
+$textColor: #232323;
+$textColor2: #919193;
+
+// mixins
+
+@mixin web-alias { // text smoothness hack
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Classes
+
+.container_extra_large {
+	width: 1370px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.container_large {
+	width: 1190px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	width: 960px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		width: initial;
+		max-width: initial;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.container_large {
+		width: initial;
+		max-width: initial;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.container_extra_large {
+		width: initial;
+		max-width: initial;
+		margin: 0 auto;
+	}
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+// forms

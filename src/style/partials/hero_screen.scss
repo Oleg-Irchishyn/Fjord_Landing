@@ -1,0 +1,96 @@
+﻿.hero_screen {
+	min-height: 897px;
+
+	.hero_screen_message {
+		margin-top: 80px;
+		display: inline-block;
+
+		.message_entry {
+			.entry_title {
+				font-family: $fontMainHairline;
+				font-size: 72px;
+				font-weight: normal;
+				line-height: normal;
+				text-transform: uppercase;
+				white-space: pre-line;
+				margin: 0;
+			}
+
+			.entry_text {
+				display: inline-block;
+				margin-left: 5px;
+				font-family: $fontMainLight;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: normal;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.hero_screen {
+		min-height: initial;
+
+		.hero_screen_message {
+			margin-top: 0px;
+			margin-bottom: 50px;
+			display: block;
+			width: 100%;
+
+			.message_entry {
+				text-align: center;
+
+				.entry_title {
+					font-size: 50px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+	.hero_screen {
+		min-height: initial;
+
+		.hero_screen_message {
+			margin-top: 20px;
+			margin-bottom: 80px;
+			display: block;
+			width: 100%;
+
+			.message_entry {
+				text-align: center;
+
+				.entry_title {
+					font-size: 50px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+	.hero_screen {
+		min-height: initial;
+
+		.hero_screen_message {
+			margin-top: 0px;
+			margin-bottom: 80px;
+			display: block;
+			width: 100%;
+
+			.message_entry {
+				text-align: center;
+
+				.entry_title {
+					font-size: 72px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

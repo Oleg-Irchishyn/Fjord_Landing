@@ -1,0 +1,238 @@
+﻿.features {
+	min-height: 271px;
+	display: inline-block;
+	width: 100%;
+	background: #fff;
+
+	.features__inner {
+		display: flex;
+		justify-content: center;
+
+		.features_listing {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 110px;
+			min-width: 900px;
+
+			.features_listing_item {
+				min-width: 244px;
+				min-height: 264px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+
+				.item_image {
+					position: relative;
+
+					.preview img {
+						width: 60px;
+						height: 48px;
+					}
+				}
+
+				.item_message {
+					font-family: $fontMainLight;
+					font-size: 14px;
+					line-height: 24px;
+					white-space: pre-line;
+					color: $textColor;
+					margin-top: 0px;
+					margin-left: 0px;
+					text-transform: uppercase;
+					position: relative;
+
+					.message_tip {
+						display: inline-block;
+						font-size: 10px;
+						color: #fff;
+						padding: 0px 11.5px;
+						border-radius: 2em;
+						background: #26e6e6;
+						position: absolute;
+						top: 25px;
+						right: -45px;
+						font-weight: normal;
+					}
+				}
+
+				.message_descr {
+					margin-top: 0px;
+					margin-left: 0px;
+					font-family: $fontMainLight;
+					font-size: 14px;
+					font-weight: 700;
+					white-space: pre-line;
+					line-height: 22px;
+					color: $textColor2;
+				}
+
+				.btn.btn_third {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+.features .features__inner .features_listing .features_listing_item:nth-of-type(2) .item_image {
+	position: relative;
+
+	.preview img {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.features .features__inner .features_listing .features_listing_item:nth-of-type(3) {
+	.item_image {
+		position: relative;
+
+		.preview img {
+			width: 60px;
+			height: 43px;
+		}
+	}
+
+	.item_message {
+		margin-top: 10px;
+	}
+
+	.message_descr {
+		margin-top: 12px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.features {
+		.features__inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.features_listing {
+				display: flex;
+				flex-direction: column;
+				justify-content: initial;
+				align-items: center;
+				margin-top: 70px;
+				margin-bottom: 70px;
+				min-width: 300px;
+
+				.features_listing_item {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+	.features {
+		.features__inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.features_listing {
+				display: flex;
+				flex-direction: column;
+				justify-content: initial;
+				align-items: center;
+				margin-top: 70px;
+				margin-bottom: 70px;
+				min-width: 400px;
+
+				.features_listing_item {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.features {
+		.features__inner {
+			.features_listing {
+				margin-bottom: 70px;
+				margin-top: 70px;
+				min-width: 100%;
+
+				.features_listing_item {
+					width: 33%;
+
+					.message_descr {
+						margin-top: 20px;
+						white-space: normal;
+					}
+
+					.btn.btn_third {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.features .features__inner .features_listing .features_listing_item:nth-of-type(2) {
+		.btn.btn_third {
+			margin-top: 0px;
+		}
+	}
+
+	.features .features__inner .features_listing .features_listing_item:nth-of-type(3) {
+		.item_message {
+			margin-top: 10px;
+		}
+
+		.message_descr {
+			margin-top: 32px;
+		}
+
+		.btn.btn_third {
+			margin-top: 0px;
+		}
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	.features {
+		.features__inner {
+			.features_listing {
+				margin-bottom: 70px;
+				margin-top: 70px;
+				min-width: 100%;
+			}
+		}
+	}
+}
+
+/*EXCEPTIONS IN STYLES FOR IE*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.features {
+		float: left;
+		margin-top: -20px;
+
+		.features_listing_item {
+			.message_tip {
+				right: -60px !important;
+			}
+		}
+	}
+}
+
+/*EXCEPTIONS IN STYLES FOR MOZILLA*/
+
+@-moz-document url-prefix() {
+	.features {
+		.features_listing_item {
+			.message_tip {
+				right: -55px !important;
+			}
+		}
+	}
+}

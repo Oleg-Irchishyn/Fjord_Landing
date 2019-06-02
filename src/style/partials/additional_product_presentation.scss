@@ -1,0 +1,244 @@
+﻿.additional_product_presentation {
+	background: $bgMain;
+	display: inline-block;
+	width: 100%;
+	min-height: 750px;
+
+	.additional_product_presentation__inner {
+		background: #000;
+		min-height: 750px;
+		position: relative;
+	}
+}
+
+.additional_product_presentaion_message {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-left: 125px;
+	max-width: 545px;
+
+	.message_title {
+		font-family: $fontMainHairline;
+		font-size: 72px;
+		font-weight: normal;
+		line-height: 80px;
+		white-space: pre-line;
+		color: #fff;
+	}
+
+	.message_descr {
+		font-family: $fontMainLight;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 22px;
+		white-space: pre-line;
+		color: #919193;
+		margin-top: 30px;
+	}
+
+	.btn.btn_secondary {
+		background: #26e6e6;
+		max-width: 180px;
+		margin-top: 160px;
+	}
+}
+
+.additional_product_presentaion_carousel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("../../img/content/iPad.png") no-repeat center;
+	width: 779px;
+	height: 673px;
+	position: absolute;
+	top: 265px;
+	right: -120px;
+
+	.carousel_item {
+		margin-left: 400px;
+
+		img {
+			width: 162px;
+			height: 144px;
+		}
+	}
+
+	.carousel_item.item_second {
+		img {
+			transform: rotate(45deg);
+		}
+	}
+
+	.carousel_item.item_third {
+		img {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.additional_product_presentaion_carousel .prev_arrow.slick-arrow {
+	width: 70px;
+	height: 70px;
+	background: transparent;
+	border: 4px solid #333;
+	position: absolute;
+	top: 44%;
+	left: -15%;
+	border-radius: 100%;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+.additional_product_presentaion_carousel .prev_arrow.slick-arrow:after {
+	content: "";
+	background: url("../../img/ui/ipad_prev_arrow_icon.png") no-repeat center;
+	width: 11px;
+	height: 16px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.additional_product_presentaion_carousel .slick-next.slick-arrow {
+	display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+	.additional_product_presentation {
+		min-height: 500px;
+
+		.additional_product_presentation__inner {
+			min-height: 500px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.additional_product_presentaion_message {
+		align-items: center;
+		margin-left: 0px;
+		max-width: 545px;
+		margin: auto;
+
+		.message_title {
+			font-size: 50px;
+			line-height: normal;
+			white-space: normal;
+			text-align: center;
+			margin-top: 70px;
+		}
+
+		.message_descr {
+			white-space: normal;
+			margin-top: 30px;
+			text-align: center;
+		}
+
+		.btn.btn_secondary {
+			margin-top: 50px;
+		}
+	}
+
+	.additional_product_presentaion_carousel {
+		background: url("../../img/content/iPad_small.png") no-repeat center;
+		width: 250px;
+		height: 216px;
+		position: relative;
+		float: right;
+		top: 0px;
+		right: 0px;
+		margin-top: 50px;
+		margin-bottom: 70px;
+		margin-right: -15px;
+
+		.carousel_item {
+			margin-left: 310px;
+		}
+	}
+
+	.additional_product_presentaion_carousel .prev_arrow.slick-arrow {
+		width: 35px;
+		height: 35px;
+		top: 42%;
+		left: -23%;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+	.additional_product_presentaion_message {
+		align-items: flex-start;
+		margin-left: 0px;
+		margin: auto;
+		max-width: 545px;
+	}
+
+	.additional_product_presentaion_carousel {
+		background: url("../../img/content/iPad_small.png") no-repeat center;
+		width: 250px;
+		height: 216px;
+		position: relative;
+		float: right;
+		top: 0px;
+		right: 0px;
+		margin-top: -200px;
+		margin-bottom: 70px;
+		margin-right: 0px;
+
+		.carousel_item {
+			margin-left: 310px;
+		}
+	}
+
+	.additional_product_presentaion_carousel .prev_arrow.slick-arrow {
+		width: 35px;
+		height: 35px;
+		top: 42%;
+		left: -23%;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1599px) {
+	.additional_product_presentaion_message {
+		align-items: flex-start;
+		margin-left: 0px;
+		margin: auto;
+		max-width: 545px;
+	}
+
+	.additional_product_presentaion_carousel {
+		background: url("../../img/content/iPad_medium.png") no-repeat center;
+		width: 400px;
+		height: 346px;
+		position: relative;
+		float: right;
+		top: 0px;
+		right: 0px;
+		margin-top: -200px;
+		margin-bottom: 70px;
+		margin-right: 0px;
+
+		.carousel_item {
+			margin-left: 160px;
+		}
+	}
+
+	.additional_product_presentaion_carousel .prev_arrow.slick-arrow {
+		width: 60px;
+		height: 60px;
+		top: 42%;
+		left: -23%;
+	}
+}
+
+/*EXCEPTIONS IN STYLES FOR IE*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.additional_product_presentation {
+		float: left;
+		margin-top: -20px;
+	}
+}

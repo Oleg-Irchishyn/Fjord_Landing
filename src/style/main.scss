@@ -1,0 +1,136 @@
+@import "vendor/reset";
+@import "vendor/normalize";
+
+@import "partials/base";
+@import "partials/btn";
+@import "partials/header";
+@import "partials/hero_screen";
+@import "partials/features";
+@import "partials/product_presentation";
+@import "partials/build_website";
+@import "partials/additional_features";
+@import "partials/additional_product_presentation";
+@import "partials/platform_features";
+@import "partials/quotes";
+@import "partials/gallery";
+@import "partials/join_us";
+@import "partials/prices";
+@import "partials/footer";
+
+body {
+	font-family: $fontMainBlack, $fontMainLight, $fontMainHairline, sans-serif;
+	font-size: 14px;
+	line-height: normal;
+	background: $bgMain;
+	color: $textColor;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+	padding: 0;
+	margin: 0;
+
+	@include web-alias;
+}
+
+// TOP SECTIONS STYLES FOR ELEMENTS WITH BACKGROUNDS
+
+.top_sections {
+	background-image: url("../img/content/top_sections_bg.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+	.top_sections {
+		background: inherit;
+	}
+}
+
+// HEADER STYLES FOR ELEMENTS WITH BACKGROUNDS
+
+.header_main_nav .nav_listing .listing_item.pages a::after {
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: calc(0% + 45px);
+	background: url("../img/ui/nav_arrow_down.png");
+	width: 6px;
+	height: 3px;
+}
+
+.header_main_nav .nav_listing .listing_item.elements a::after {
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: calc(40% + 45px);
+	background: url("../img/ui/nav_arrow_down.png");
+	width: 6px;
+	height: 3px;
+}
+
+// PRODUCT PRESENTATION STYLES FOR ELEMENTS WITH BACKGROUNDS AND BEFORE/AFTER PSEUDOELEMENTS BACKGROUNDS
+
+.product_presentation_carousel {
+	background: url("../img/content/device.png") no-repeat center;
+}
+
+@media screen and (max-width: 992px) {
+	.product_presentation_carousel {
+		background: url("../img/content/device_small.png") no-repeat center !important;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	.product_presentation_carousel {
+		background: url("../img/content/device_medium.png") no-repeat center;
+	}
+}
+
+.prev.slick-arrow:after {
+	background: url("../img/ui/prev_arrow_icon.png") no-repeat center;
+}
+
+.next.slick-arrow:before {
+	background: url("../img/ui/next_arrow_icon.png") no-repeat center;
+}
+
+// ADDITIONAL PRODUCT PRESENTATION STYLES FOR ELEMENTS WITH BACKGROUNDS AND BEFORE/AFTER PSEUDOELEMENTS BACKGROUNDS
+
+.additional_product_presentaion_carousel {
+	background: url("../img/content/iPad.png") no-repeat center;
+}
+
+.additional_product_presentaion_carousel .prev_arrow.slick-arrow:after {
+	content: "";
+	background: url("../img/ui/ipad_prev_arrow_icon.png") no-repeat center;
+}
+
+@media screen and (max-width: 992px) {
+	.additional_product_presentaion_carousel {
+		background: url("../img/content/iPad_small.png") no-repeat center !important;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1599px) {
+	.additional_product_presentaion_carousel {
+		background: url("../img/content/iPad_medium.png") no-repeat center !important;
+	}
+}
+
+// QUOTES STYLES FOR ELEMENTS WITH BACKGROUNDS
+
+.quotes_carousel .carousel_item::before {
+	content: '';
+	background: url("../img/ui/quotes_open.png") no-repeat center;
+}
+
+.quotes_carousel .carousel_item::after {
+	content: '';
+	background: url("../img/ui/quotes_close.png") no-repeat center;
+}
+
+// FOOTER STYLES FOR ELEMENTS WITH BACKGROUNDS
+
+.footer {
+	background-image: url("../img/content/footer_bg.jpg");
+}
