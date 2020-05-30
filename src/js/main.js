@@ -44,10 +44,12 @@ function toggleHeaderNavItemClass() {
 
 toggleHeaderNavItemClass();
 
-/* CLICK FUNCTION ON THE BURGER ITEM THAT TOGGLES APPERANCE OF THE NAVIGATION MENU WITH BUTTON IN HEADER FOR SMALL DEVICES*/
+/* CLICK FUNCTION ON THE BURGER ITEM THAT TOGGLES APPERANCE OF THE NAVIGATION MENU WITH BUTTON IN HEADER*/
 
 function triggerBurgerMenu() {
   let burger_mobile = $('.burger_mobile');
+  let burger_desktop = $('.burger_desktop');
+  let burger_desktop_contacts = $('.burger_desktop__contacts');
   let headerMainNav = $('.header_main_nav');
   let headerMainBtn = $('.btn.header_btn');
 
@@ -55,6 +57,11 @@ function triggerBurgerMenu() {
     $(this).toggleClass("change");
     headerMainNav.toggle();
     headerMainBtn.toggle();
+  });
+
+  burger_desktop.click(function () {
+    $(this).toggleClass("change");
+    burger_desktop_contacts.toggle();
   });
 }
 
